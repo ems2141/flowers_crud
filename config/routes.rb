@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   get '/', to: 'flowers#index'
+  get '/flowers/new', to: 'flowers#new'
+  post '/flowers', to: 'flowers#create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
