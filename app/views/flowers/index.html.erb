@@ -2,6 +2,10 @@
 
 <a href="/flowers/new">Add a Flower</a>
 
+<ul>
 <% @flowers.each do |flower| %>
-Flower Type: <%= flower.name %>
+<li>
+  Flower Type: <%= flower.name %> <a href="/flowers/<%=flower.id%>/edit">Edit Flower</a>
+</li>
 <% end %>
+</ul>

@@ -9,7 +9,17 @@ class FlowersController < ApplicationController
   end
 
   def create
-    @flowers = Flower.create(name: params[:flower_name])
+    Flower.create(name: params[:flower_name])
+    redirect_to '/'
+  end
+
+  def edit
+    @flower = Flower.find(params[:id])
+  end
+
+  def update
+    @flower = Flower.find(params[:id])
+    @flower.update(name: params[:edit_name])
     redirect_to '/'
   end
 
